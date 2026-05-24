@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About me</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +25,7 @@
     <hr>
 
     <section class="page-content">
-        <h1>Contact Us</h1>
+        <h2>Contact Us</h2>
 
         <p>
             Feel free to contact me using the information below.
@@ -33,7 +33,7 @@
 
         <div class="contact-box">
             <p><strong>Email:</strong> surprise2024@email.com</p>
-            <p><strong>Phone:</strong> +27 88 888 8888</p>
+            <p><strong>Phone:</strong> +27 79 422 2326</p>
             <p><strong>Location:</strong> Polokwane, Limpopo, South Africa</p>
         </div>
 
@@ -46,32 +46,73 @@
         </p>
 
         <form class="contact-form">
-            <div class="form">
+            <div class="form-group">
                 <label>Name:</label>
                 <input type="text" placeholder="Enter your name" required>
             </div>
             <br>
-            <div class="form">
+            <div class="form-group">
                 <label>Email:</label>
                 <input type="email" placeholder="Enter your email" required>
             </div>
             <br>
-            <div class="form">
+            <div class="form-group">
                 <label>Message:</label>
                 <br>
                 <textarea rows="6" placeholder="Enter your message"></textarea>
             </div>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
-    <div class="guick-links">
+    <footer>
+        <div>
+            <h3>Address Here: </h3>
+            <p>
+                Polokwane
+            </p>
+            <p>
+                Limpopo
+            </p>
+            <p>
+                South Africa
+            </p>
+        </div>
+        <div class="guick-links">
             <h4>Quick Links: </h4>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About me</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-    </div>
+        </div>
+        <aside>
+            <div class="map-box">
+                <h4>Map: </h4>
+                <iframe
+                    src="https://maps.google.com/maps?q=Polokwane,+Limpopo,+South+Africa&output=embed"
+                    width="300"
+                    height="200"
+                    style="border:0"
+                    loading="lazy"
+                    frameborder="0">
+                </iframe>
+            </div>
+        </aside>
+        <div class="socials">
+        <h4>Follow Me: </h4>
+            <ul>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter">Twitter</i></a>
+                <li><a href="https://www.facebook.com/share/14d8BEJK4iV/" target="_blank"><i class="fab fa-facebook-f">Facebook</i></a>
+                <li><a href="https://www.instagram.com/sbusiso8690/?hl=en" target="_blank"><i class="fab fa-instagram">Instagram</i></a>
+            </ul>
+        </div>
+        <div>
+            <h3>Phone: </h3>
+            <p>
+                +27 79 422 2326
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -15,7 +15,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About me</a></li>
+                    <li><a href="about.html" class="active">About me</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
@@ -24,7 +24,7 @@
         <hr>
 
         <section class="page-content">
-            <h1>About Me</h1>
+            <h2>About Me</h2>
 
             <p>
                 Hi! 
@@ -49,14 +49,54 @@
                 and I am excited to continue growing my skills and knowledge in the field of computer science.
             </p>
     </section>
-    <div class="guick-links">
+    <footer>
+        <div>
+            <h3>Address Here: </h3>
+            <p>
+                Polokwane
+            </p>
+            <p>
+                Limpopo
+            </p>
+            <p>
+                South Africa
+            </p>
+        </div>
+        <div class="guick-links">
             <h4>Quick Links: </h4>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About me</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-    </div>
-
+        </div>
+        <aside>
+            <div class="map-box">
+                <h4>Map: </h4>
+                <iframe
+                    src="https://maps.google.com/maps?q=Polokwane,+Limpopo,+South+Africa&output=embed"
+                    width="300"
+                    height="200"
+                    style="border:0"
+                    loading="lazy"
+                    frameborder="0">
+                </iframe>
+            </div>
+        </aside>
+        <div class="socials">
+        <h4>Follow Me: </h4>
+            <ul>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter">Twitter</i></a>
+                <li><a href="https://www.facebook.com/share/14d8BEJK4iV/" target="_blank"><i class="fab fa-facebook-f">Facebook</i></a>
+                <li><a href="https://www.instagram.com/sbusiso8690/?hl=en" target="_blank"><i class="fab fa-instagram">Instagram</i></a>
+            </ul>
+        </div>
+        <div>
+            <h3>Phone: </h3>
+            <p>
+                +27 79 422 2326
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
