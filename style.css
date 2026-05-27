@@ -1,0 +1,436 @@
+/*CSS Variables*/
+:root {
+    --bg:       #0d0d0d;
+    --surface:  #141414;
+    --border:   #2a2a2a;
+    --accent:   #c8a96e;
+    --text:     #f0ece3;
+    --muted:    #888880;
+}
+
+
+* {/*Refresshing page*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { /*smoth scrolling*/
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Header*/
+header {
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/*logo*/
+.logo img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    object-fit: cover;
+}
+
+/*Navigation*/
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--muted);
+    font-size: 1rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/*Hamburger Menu(for smaller screens)*/
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* Video Section */
+.terminator {
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.section-label {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.terminator h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.terminator video {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 2px solid var(--border); 
+    border-radius: 10px;
+}
+
+.terminator video:hover {
+    border-color: var(--accent);
+}
+
+/* Introduction Section */
+.introduction {
+    display: flex; 
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 3rem;
+    border-top: 1px solid var(--border);
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.intro h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.image img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    transition: border-color 0.3s;
+}
+
+.image img:hover {
+    border-color: var(--accent);
+}
+
+/*Footer*/
+footer {
+    background: var(--surface);
+    gap: 2rem; 
+    padding: 3rem 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    border-top: 1px solid var(--border);
+}
+
+footer h3, footer h4{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer p, footer li {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 2;
+}
+
+footer a {
+    color: var(--muted);
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+.map-box {
+    margin-top: 1rem;
+    height: 300px;
+}
+
+
+.map-box iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    border: 2px solid var(--border);
+}
+
+/*social buttons*/
+.social-btn {
+    display: inline-block;
+    padding: 4px 14px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--muted);
+    transition: color 0.3s, border-color 0.3s;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.social-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.footer-bottom {
+    text-align: center;
+    color: var(--muted);
+    font-size: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border);
+}
+
+/* MEDIA */
+/*Tablet*/
+@media (max-width: 640px) {
+    .introduction {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 650px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 64px;
+        right: 0;
+        left: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 0; 
+    }
+
+    nav.open {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    nav a:hover {
+        background: var(--bg);
+        color: var(--surface);
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+    @media (max-width: 400px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /*Other page styles*/
+    .page-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .page-content h2{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--accent);
+    }
+
+    .page-content p {
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 2;
+        margin-bottom: 1rem;
+    }
+
+    /*Contact box*/
+    .contact-box {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1rem;
+        margin: 1.5rem 0 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-item {
+        display: flex;
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    .contact-label {
+        font-weight: bold;
+        color: var(--accent);
+        min-width: 80px;
+    }
+
+    /*Contact form*/
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 550px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-group label {
+        color: var(--accent);
+        font-weight: bold;
+        color: var(--accent);
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 0.5rem 0.5rem;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--surface);
+        color: var(--text);
+        font-size: 1rem;
+        width: 100%;
+        transition: border-color 0.3s;
+    }
+
+    .form-group input:focus, 
+    .form-group textarea:focus {
+        border-color: var(--accent);
+        outline: none;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+    }
+
+    button.btn {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        background: var(--accent);
+        color: var(--text);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    /*Background video*/
+    .bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.3;
+    }
