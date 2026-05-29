@@ -9,7 +9,7 @@
 }
 
 
-* {/*Refresshing page*/
+* {/*Reset page*/
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -293,8 +293,8 @@ footer a:hover {
         padding: 1rem 0; 
     }
 
-    nav.open {
-        display: block;
+    nav.open ul{
+        display: flex;
     }
 
     nav ul {
@@ -313,7 +313,7 @@ footer a:hover {
 
     nav a:hover {
         background: var(--bg);
-        color: var(--surface);
+        color: var(--accent);
     }
 
     footer {
@@ -421,6 +421,11 @@ footer a:hover {
         font-size: 1rem;
         cursor: pointer;
         transition: background-color 0.3s;
+    }
+
+    button.btn:hover {
+        background: var(--text);
+        color: var(--accent);
     }
 
     /*Background video*/
